@@ -156,4 +156,17 @@ nav button:hover {
     max-width: 560px;
     max-height: 315px;
     border-radius: 10px;
+
+    /* Public Videos Section */
+.public-videos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.public-videos h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
 }
