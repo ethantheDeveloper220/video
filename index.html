@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Sharing Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h1>My Video Platform</h1>
+        <button id="loginButton">Login</button>
+        <button id="uploadButton">Upload Video</button>
+    </nav>
+
+    <!-- Video Feed -->
+    <div class="video-feed">
+        <div class="video-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+            <img src="thumbnail.jpg" alt="Video Thumbnail">
+            <h3>Sample Video Title</h3>
+        </div>
+        <!-- Add more video cards here -->
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUploadModal()">&times;</span>
+            <h2>Upload Video</h2>
+            <input type="file" id="fileUpload" accept="video/*">
+            <input type="text" id="videoTitle" placeholder="Video Title">
+            <button onclick="uploadVideo()">Upload</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
