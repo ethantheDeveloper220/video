@@ -1,3 +1,33 @@
+// Sample public videos data
+const publicVideos = [
+    {
+        title: "Public Video 1",
+        thumbnail: "thumbnail1.jpg",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+        title: "Public Video 2",
+        thumbnail: "thumbnail2.jpg",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    // Add more video data as needed
+];
+
+// Load public videos into the public video feed
+function loadPublicVideos() {
+    const publicVideoFeed = document.getElementById('publicVideoFeed');
+    publicVideos.forEach(video => {
+        const videoCard = document.createElement('div');
+        videoCard.className = 'video-card';
+        videoCard.innerHTML = `
+            <img src="${video.thumbnail}" alt="${video.title} Thumbnail">
+            <h3>${video.title}</h3>
+        `;
+        videoCard.onclick = () => openVideoModal(video.url);
+        publicVideoFeed.appendChild(videoCard);
+    });
+}
+
 // Show/Hide Modals
 document.getElementById('loginButton').onclick = () => document.getElementById('loginModal').style.display = 'flex';
 document.getElementById('uploadButton').onclick = () => document.getElementById('uploadModal').style.display = 'flex';
@@ -39,3 +69,6 @@ function uploadVideo() {
     }
     closeUploadModal();
 }
+
+// Load public videos on page load
+window.onload = loadPublicVideos;
