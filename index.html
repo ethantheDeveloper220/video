@@ -14,14 +14,13 @@
         <button id="uploadButton">Upload Video</button>
     </nav>
 
-    <!-- Video Feed -->
-    <div class="video-feed">
-        <div class="video-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-            <img src="thumbnail.jpg" alt="Video Thumbnail">
-            <h3>Sample Video Title</h3>
+    <!-- Public Videos Section -->
+    <section class="public-videos">
+        <h2>Public Videos</h2>
+        <div class="video-feed" id="publicVideoFeed">
+            <!-- Video cards will be populated here by JavaScript -->
         </div>
-        <!-- Add more video cards here -->
-    </div>
+    </section>
 
     <!-- Video Modal -->
     <div id="videoModal" class="modal">
